@@ -9,4 +9,4 @@ respawn
 
 setuid {{ events_user }}
 setgid {{ events_group }}
-exec /opt/monasca/bin/gunicorn -k eventlet --worker-connections=2000 --backlog=1000 --paste /etc/monasca/events_api.ini --name monasca-events-api
+exec /usr/local/bin/gunicorn -k eventlet --worker-connections=2000 --backlog=1000 --paste /etc/monasca/events_api.ini --name monasca-events-api
